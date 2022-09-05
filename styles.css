@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Spartan', sans-serif;
+    background: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position:top left, bottom right ;
+}
+.contenedorBody{
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+/*HeadeR....................................*/
+.estrellas .cincoEstrellas{
+    min-width: 110px;
+
+}
+.estrellas .textoEstrellas{
+    min-width: 250px;
+    text-align: center;
+}
+
+.contenedorEstrellas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 26px;
+}
+.estrellas{
+    background-color:hsl(302, 28%, 81%) ;
+    width: 325px;
+    height: 77px;
+    padding: 15px;
+    margin: 8px 0;
+    font-weight: 700;
+    color:  hsl(300, 62%, 21%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+
+}
+
+header {
+    margin-bottom: 25px;
+
+}
+header h1{
+    color: hsl(300, 43%, 22%);
+    font: size 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 64px 30px 64px;
+}
+
+header p{
+    color: hsl(303, 10%, 53%);
+    margin:0 28px 0 28px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14;
+    font-weight: 500;
+}
+/*Tarjetas de precentación*/
+.contenedorDeTarjetas{
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.tarjetas{
+    background-color:hsl(300, 40%, 26%) ;
+    max-width: 330px;
+    height: 250px;
+    border-radius:7px;
+    margin:16px 24px 0 24px;
+    padding:37px;
+    font-size: 14px;
+    color: hsl(300,24%,96%);
+    display: grid;
+    grid-template-columns:1fr 10fr;
+}
+
+.tarjetas img {
+   border-radius: 50%;
+   width: 45px;
+   margin-right: 20px;
+   grid-column: 1 / 2;
+   grid-row: 1 / 3;
+
+
+}
+.tarjetas .nombre{
+    font-weight: 700;
+    grid-column: 2/3;
+    text-align: center;
+}
+.tarjetas .status{
+    color: hsl(333, 80%, 67%);
+    grid-column: 2/3;
+    text-align: center;
+}
+.tarjetas p {
+    font-weight: 500;
+    line-height: 25px;
+    grid-column: 1/3;
+    margin-top: 30px;
+
+}
+
+/*FooteR*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*MediaQ*//*375px*/
+
+@media only screen and (min-width:376px){
+.contenedorEstrellas{
+    padding: 0 24px;
+    
+}
+    .estrellas1{
+        align-self: flex-start;
+
+    }
+    .estrellas3{
+        align-self: flex-end;
+    }
+
+    .tarjetaColton{
+        align-self: flex-start;
+
+    }
+    .tarjetaAnne {
+        align-self: flex-end;
+    }
+}
+
+/*diseño para tablets 768px */
+
+@media only screen and (min-width:768px){
+body{
+    background: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat:no-repeat;
+    background-size: 400px;
+}
+.estrellas{
+    flex-direction: row;
+    width: 440px;
+    height: 50px;
+    justify-content: center;
+}
+.contenedorDeTarjetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.tarjetaColton{
+    grid-column: 1/2;
+    justify-self: center;
+}
+.tarjetaIrene{
+    grid-column:2/3;
+    justify-self: center;
+}
+.tarjetaAnne{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-self: center;
+}
+
+}
+
+/*900px*/
+
+@media only screen and (min-width:900px){
+    .contenedorBody{
+        display:grid;
+        grid-template-columns:repeat(12, 1fr);
+    }
+    header{
+        grid-column: 1/6;
+    }
+    .contenedorEstrellas{
+        grid-column: 6/-1;
+    }
+    .contenedorDeTarjetas{
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+    footer{
+        grid-column:1/-1;
+    }
+}
+
+/*1080px*/
+
+@media only screen and (min-width:1160px){
+    body{background-size: 580px; }
+   
+    .contenedorBody{
+        margin:125px auto;
+        max-width: 1110px;
+        
+    }
+    .contenedorDeTarjetas{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        height: 320px;
+    }
+.tarjetas{
+    
+}
+
+}
+
+
+/***************1440px*****************/
+
+@media only screen and (min-width:1440px){
+
+    header{
+        min-width: 430px;
+        margin:0;
+    }
+
+    header h1{
+        font-size: 45px;
+        text-align: left;
+        margin: 0;
+        line-height: 45px;
+
+    }
+    header p {
+        text-align: left;
+        margin: 15px 0 30px 0;
+
+    }
+    .contenedorEstrellas{
+        grid-column: 7/-1;
+        padding: 0;
+    }
+}
